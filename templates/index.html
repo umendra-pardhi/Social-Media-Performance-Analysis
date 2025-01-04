@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                    <path d="M5 3v4"/>
+                    <path d="M19 17v4"/>
+                    <path d="M3 5h4"/>
+                    <path d="M17 19h4"/>
+                </svg>
+                Social Media Analyzer AI
+            </h1>
+        </header>
+
+        <main id="chat-container">
+            <div id="welcome-screen">
+                <svg xmlns="http://www.w3.org/2000/svg" class="welcome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+                </svg>
+                <h2>Welcome to Social Media Analyzer</h2>
+                <p>Paste your social media content to get AI-powered insights and suggestions</p>
+            </div>
+            <div id="messages"></div>
+        </main>
+
+        <footer>
+            <form id="input-form" action="#" method="POST">
+                <div class="input-container">
+                    <textarea 
+                        id="user-input" 
+                        placeholder="Paste your social media content here..."
+                        rows="3"
+                    ></textarea>
+                    <button type="submit" id="send-button" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 2 11 13"/>
+                            <path d="M22 2 15 22l-4-9-9-4 20-7z"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+</body>
+</html>
