@@ -84,6 +84,3 @@ The project includes a data generation script that creates mock social media dat
 
 This project is part of a pre-hackathon assignment and was completed as per the specified requirements. Feel free to fork and modify according to your needs.
 
-## ⚠️ Important Dates
-
-- Submission Deadline: January 8th, 2025
