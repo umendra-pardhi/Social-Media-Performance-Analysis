@@ -64,7 +64,7 @@ python app.py
 - `POST /analyze`: 
   - Accepts content for analysis
   - Returns AI-generated insights using Llama model
-  - Payload format: `{"content": "your_content_here"}`
+  - Payload format: `{"content": "user_prompt_here"}`
 
 ## 🤝 Contributing
 
