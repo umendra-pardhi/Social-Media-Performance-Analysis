@@ -119,3 +119,40 @@ ol{
     margin-left: 20px;
     list-style-type: decimal;
 }
+
+/* li{
+    line-height: 12px;
+} */
+
+table{
+    /* border: 1px solid white; */
+    border-collapse: collapse;
+}
+
+table td, th{
+    border: 1px solid white;
+    padding: 5px;
+}
+
+
+.attr{
+    color: #60a5fa;
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+    font-family: monospace;
+}
+
+.welcome-icon {
+    animation: zoom 1s infinite alternate;
+}
+
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.7);
+    }
+}

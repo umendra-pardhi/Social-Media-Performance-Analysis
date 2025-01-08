@@ -84,5 +84,5 @@ class SocialMediaDataGenerator:
 
 # Generate the data
 generator = SocialMediaDataGenerator()
-social_media_data = generator.generate_data(500)
+social_media_data = generator.generate_data(100)
 generator.save_to_csv(social_media_data)

@@ -6,6 +6,7 @@
     <title>Social Media Analyzer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/chat.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.svg') }}" type="image/x-icon">
 </head>
 <body>
     <div class="app">
@@ -24,13 +25,25 @@
 
         <main id="chat-container">
             <div id="welcome-screen">
-                <svg xmlns="http://www.w3.org/2000/svg" class="welcome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
-                </svg>
+                 <!-- Rotating and Zooming SVG (initial) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="welcome-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+        </svg>
+
+        <!-- Zoomed-in version SVG (to appear during zoom-in animation) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="zoom-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+            <path d="M5 3v4"/>
+            <path d="M19 17v4"/>
+            <path d="M3 5h4"/>
+            <path d="M17 19h4"/>
+        </svg>
                 <h2>Welcome to Social Media Analyzer</h2>
-                <p>Paste your social media content to get AI-powered insights and suggestions</p>
+                <p>Ask AI for insights and suggestions on your social media content</p>
             </div>
             <div id="messages"></div>
+
+            <div id="chart-container" style="width: 100%; max-width: 600px; margin: auto; display: none;"></div>
         </main>
 
         <footer>
@@ -49,11 +62,10 @@
                     </button>
                 </div>
             </form>
-            
+            <p class="attr">Developed by Team APARSHAKTI</p>
         </footer>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </div>
 
     <script type="module" src="{{ url_for('static', filename='js/app.js') }}"></script>
 
