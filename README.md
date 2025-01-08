@@ -48,8 +48,7 @@ pip install -r requirements.txt
 ```
 3. Set up environment variables Create a .env file with:
 ```bash
-TOKEN=[Your_Application_Token]
-GROQ_API_KEY=[Your_Groq_API_Key]
+LANGFLOW_TOKEN=[Your_Langflow_Token]
 ```
 4. Run the application
 ```bash
@@ -66,19 +65,6 @@ python app.py
   - Accepts content for analysis
   - Returns AI-generated insights using Llama model
   - Payload format: `{"content": "your_content_here"}`
-
-## 🔍 Data Generation
-
-The project includes a data generation script that creates mock social media data with the following characteristics:
-
-- Content Types:
-  - Carousel (25% weight, 1.5x engagement multiplier)
-  - Reel (30% weight, 2.0x engagement multiplier)
-  - Static Post (20% weight, 1.0x engagement multiplier)
-  - Story (15% weight, 0.8x engagement multiplier)
-  - IGTV (10% weight, 1.2x engagement multiplier)
-
-- Hashtag Categories: Lifestyle, Tech, Food, Travel, Fitness, Fashion, Beauty, Business, Art, Music
 
 ## 🤝 Contributing
 
